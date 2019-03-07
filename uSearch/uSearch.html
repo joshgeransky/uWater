@@ -5,24 +5,45 @@
         <title>uWater</title>
         <link rel="stylesheet" type="text/css" href="../css/foundation.css"/>
         <style>
+            #title {
+                text-align: center;
+            }
+            #safe {
+                text-align: center;
+            }
+            #country {
+                text-align: center;
+            }
+            #subr {
+                text-align: center;
+            }
+            #uquiz {
+                text-align: center;
+                line-height: 67px;
+                width: 100px;
+                height: 70px;
+                background-color: grey;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #copyright {
+                text-align: center;
+            }
         </style>
     </head>
     <body>
-        <h1>uWater</h1>
-        <div>"Is your water safe?"</div>
+        <h1 id="title">uWater</h1>
+        <div id="safe">"Is your water safe?"</div>
         <form>
-            <div>
-                <label for="country">Country</label>
-                <input id="country" type="text" required pattern="[A-Za-z]">
+            <div id="country">
+                <input id="country" type="text" placeholder="Country" required pattern="[A-Za-z]">
             </div>
-            <div>
+            <div id="subr">
                 <button type="submit">Submit</button>
-            </div>
-            <div>
                 <button>Random</button>
             </div>
         </form>
-        <div>uQuiz</div>
-        <footer>Copyrighted Team 21 2019</footer>
+        <div id="uquiz">uQuiz</div>
+        <footer id="copyright">Copyrighted Team 21 2019</footer>
     </body>
 </html>
