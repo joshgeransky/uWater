@@ -14,8 +14,14 @@ header {
     
 }
 
+header nav {
+    float: right;
+}
+
 #logo img {
     
+    float: left;
     max-height: 100px;
     max-width: auto;
+    vertical-align: middle;
 }
