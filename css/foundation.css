@@ -14,16 +14,46 @@ header {
     
 }
 
-header nav {
+header a {
+    
+    color: dimgray;
+    text-decoration: none;
+    
+}
+
+header a:hover {
+    color: darkBlue;
+}
+
+nav {
+    display: table;
     float: right;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+}
+
+ nav ul {
+     display: table-row;
+}
+            
+nav li {
+    display: table-cell;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
 }
 
 #logo img {
     
     float: left;
-    max-height: 100px;
+    max-height: 125px;
     max-width: auto;
-    vertical-align: middle;
+
+}
+
+#logo {
+    padding-bottom: 42px;
 }
 
 footer {
