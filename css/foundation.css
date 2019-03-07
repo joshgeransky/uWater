@@ -25,3 +25,12 @@ header nav {
     max-width: auto;
     vertical-align: middle;
 }
+
+footer {
+    
+    text-align: center;
+    font-size: 10pt;
+    background-color: lightGray;
+    padding: 20px;
+    
+}
