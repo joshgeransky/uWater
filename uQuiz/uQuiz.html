@@ -34,21 +34,21 @@
 	}
 	footer {
 	text-align: center;
-	 position: absolute;
 	bottom: 0;
 	width: 100%;
 	font-size: 0.8em;
 	}
-	image {
-	margin-left: 50px;
+	section {
+		text-align: center;
 	}
   
   </style>
 <body>
-<div id="header">uWater
+<div id="header">
+<a href="../uSearch/uSearch.html">uWater</a>
 <div id="anchor">
-<a href="_blank"> uSearch</a>
-<a href="_blank"> uQuiz</a>
+<a href="../uSearch/uSearch.html"> uSearch</a>
+<a href="uQuiz.html">uQuiz</a>
 </div>
 </div>
 <p>uQuiz</p>
@@ -58,6 +58,12 @@
 </section>
 <div id ="prompt">
 <h1> What is this country?</h1>
+<form>
+	<select name="country">
+		<option value="Argentina">Argentina</option>
+		<option value="Belgium">Belguim</option>
+	</select>
+</form>
 <h1>Is the water clean?</h1>
  <form>
  <input type="radio" name="yes" value="yes"> Yes<br>
