@@ -16,7 +16,7 @@ header {
 
 header a {
     
-    color: dimgray;
+    color: dcdfe5;
     text-decoration: none;
     
 }
@@ -49,11 +49,13 @@ nav li {
     float: left;
     max-height: 125px;
     max-width: auto;
+    position: relative;
+    bottom: 10px;
 
 }
 
 #logo {
-    padding-bottom: 42px;
+   /* padding-bottom: 42px; */
 }
 
 footer {
