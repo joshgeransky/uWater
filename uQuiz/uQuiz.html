@@ -53,22 +53,53 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  float: right;
 	}
+	img {
+	display: inline;
+	
+	}
+	#anchor {
+	float: right;
+	}
+	#logo {
+		 padding-top: 0px;
+                border: 20px solid lightGray;
+                padding-bottom: 50px;
+                background-color: lightGray;
+	}
+	#logo > a > img {
+		position:absolute;left:0px; top:0px;
+		
+	}
+	section {
+	position: auto;
+	display: block;
+	}
+	
   
   </style>
 <body>
 <div id="logo">
     <a href="../uSearch/uSearch.html"><img src="../images/origLogo.png" alt="uWater"></a>
-</div>
-<div id="anchor">
+	<div id="anchor">
 <a href="../uSearch/uSearch.html"> uSearch</a>
 <a href="uQuiz.html">uQuiz</a>
 </div>
+</div>
+
 
 <p>uQuiz</p>
-<br><br><br>
+<div id="leader">
+ 
+ <a class="button" href="../uBoard/uBoard.html">
+<button type="button" class ="button">Leader Board</button>
+</a>
+ </div>
+<br><br><br><br><br><br>
 <section>
 	<img src="../images/globe.png"></img>
+
 </section>
 <div id ="prompt">
 <h1> What is this country?</h1>
@@ -84,12 +115,7 @@
  <input type="radio" name="no" value="no"> No<br>
  </form>
  </div>
- <div id="leader">
  
- <a class="button" href="../uBoard/uBoard.html">
-<button type="button" class ="button">Leader Board</button>
-</a>
- </div>
  <footer>
  © Copyrighted Team 21 2019
  </footer>
