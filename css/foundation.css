@@ -28,8 +28,8 @@ header a:hover {
 nav {
     display: table;
     float: right;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding-top: 17px;
+
 
 }
 
@@ -42,6 +42,7 @@ nav li {
     margin: 10px;
     text-align: center;
     padding: 10px;
+    
 }
 
 #logo img {
@@ -50,7 +51,7 @@ nav li {
     max-height: 125px;
     max-width: auto;
     position: relative;
-    bottom: 10px;
+    bottom: 35px;
 
 }
 
