@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <style>
 	body {
-	font-family: 'Open Sans', sans-serif;
+	 font-family: 'Montserrat';
+	background-color: #ebeef4;
 	}
     #header {
 	font-weight: bold;
@@ -34,32 +35,89 @@
 	}
 	footer {
 	text-align: center;
-	 position: absolute;
 	bottom: 0;
 	width: 100%;
 	font-size: 0.8em;
 	}
+	section {
+		text-align: center;
+	}
+	.button {
+		 background-color: #33518e;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  float: right;
+	}
+	img {
+	display: inline;
+	
+	}
+	#anchor {
+	float: right;
+	}
+	#logo {
+		 padding-top: 0px;
+                border: 20px solid lightGray;
+                padding-bottom: 50px;
+                background-color: lightGray;
+	}
+	#logo > a > img {
+		position:absolute;left:0px; top:0px;
+		
+	}
+	section {
+	position: auto;
+	display: block;
+	}
+	
   
   </style>
 <body>
-<div id="header">uWater
-<div id="anchor">
-<a href="_blank"> uSearch</a>
-<a href="_blank"> uQuiz</a>
+<div id="logo">
+    <a href="../uSearch/uSearch.html"><img src="../images/origLogo.png" alt="uWater"></a>
+	<div id="anchor">
+<a href="../uSearch/uSearch.html"> uSearch</a>
+<a href="uQuiz.html">uQuiz</a>
 </div>
 </div>
+
+
 <p>uQuiz</p>
-<br><br><br>
+<div id="leader">
+ 
+ <a class="button" href="../uBoard/uBoard.html">
+<button type="button" class ="button">Leader Board</button>
+</a>
+ </div>
+<br><br><br><br><br><br>
+<section>
+    <img src="../images/globe.png" alt="The earth is actually flat! Don't believe the media!">
+
+</section>
 <div id ="prompt">
 <h1> What is this country?</h1>
+<form>
+	<select name="country">
+		<option value="Argentina">Argentina</option>
+		<option value="Belgium">Belguim</option>
+	</select>
+</form>
 <h1>Is the water clean?</h1>
  <form>
  <input type="radio" name="yes" value="yes"> Yes<br>
  <input type="radio" name="no" value="no"> No<br>
  </form>
  </div>
+ 
  <footer>
- Copyrighted Team 21 2019
+ © Copyrighted Team 21 2019
  </footer>
 </body>
  

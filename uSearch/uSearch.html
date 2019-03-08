@@ -5,9 +5,19 @@
         <title>uWater</title>
         <link rel="stylesheet" type="text/css" href="../css/foundation.css"/>
         <style>
-            #title {
+           /* #title {
+                text-align: center;
+            } */
+            
+            .title h1 {
+                text-align: center;
+				bottom: 0;
+            }
+            
+            .title {
                 text-align: center;
             }
+            
             #safe {
                 text-align: center;
             }
@@ -27,13 +37,43 @@
                 margin-right: auto;
             }
             #copyright {
-                text-align: center;
+               
+				text-align: center;
+				bottom: 0;
+				width: 100%;
+				font-size: 0.8em;
+                
             }
         </style>
     </head>
     <body>
-        <h1 id="title">uWater</h1>
-        <div id="safe">"Is your water safe?"</div>
+        
+            <header>
+    <div class="div-header">
+                
+                <div id="logo">
+                    <a href="../uSearch/uSearch.html"><img src="../images/origLogo.png" alt="uWater"></a>
+                </div>
+                            
+            <nav id="menu">
+                <ul>
+                    <li><a href="../uSearch/uSearch.html">uSearch</a></li>
+                    <li><a href="../uQuiz/uQuiz.html">uQuiz</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+    
+    </header>
+        
+        
+        <div class="content">
+        
+        <div class="title"><h1>uSearch</h1>
+        <br>
+        <span>"Is your water safe?"</span>
+            <br></div>
+        <br>
         <form>
             <div id="country">
                 <input id="country" type="text" placeholder="Country" required pattern="[A-Za-z]">
@@ -43,9 +83,24 @@
                 <button>Random</button>
             </div>
         </form>
+        <br>
         <div id="uquiz">
+<<<<<<< HEAD
             <a href="/uQuiz/uQuiz.html">uQuiz</a>
+=======
+            <a href="../uQuiz/uQuiz.html">uQuiz</a>
+            
         </div>
-        <footer id="copyright">ⒸCopyrighted - Team 21 - 2019</footer>
+        
+        <br><br><br>
+            
+>>>>>>> c5ede32f5b7cf15cecf3b0d6cafe43e239700218
+        </div>
+        
+        <footer>
+        
+            <span>© Copyright 2019 Team 21</span>
+        
+        </footer>
     </body>
 </html>
