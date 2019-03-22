@@ -20,12 +20,14 @@
             }
             #uquiz {
                 text-align: center;
-                line-height: 67px;
-                width: 100px;
-                height: 70px;
+                line-height: 90px;
+                width: 170px;
+                height: 90px;
                 background-color: grey;
+                font-size: 130%;
+                font-weight: bold;
                 margin-left: auto;
-                margin-right: auto;
+                margin-right: auto;     
             }
             #copyright {
                
@@ -33,6 +35,20 @@
 				bottom: 0;
 				width: 100%;
 				font-size: 0.8em;
+                
+            }
+            .hlinks {
+                text-decoration: none;
+            }
+            .form {
+                border-radius: 100px;
+                padding: 8px 20px;
+            }
+            a:visited{
+                color: none;
+                
+            }
+            a:hover {
                 
             }
         </style>
@@ -52,32 +68,29 @@
                 </ul>
             </nav>
         </div>
-    
-    
     </header>
-        
-        
         <div class="content">
         
-        <div class="title">
-            <h1 id="uSearchTitle">uSearch</h1>
-            <br>
-        </div>
-            <div id="safe">"Is your water safe?"</div>
-        <br>
-        <form>
-            <div id="country">
-                <input id="country" type="text" placeholder="Country" required pattern="[A-Za-z]">
+            <div class="title">
+                <h1 id="uSearchTitle">uSearch</h1>
+                <br>
             </div>
+            <div id="safe">"Is your water safe?"</div>
+            <br>
+            <form>
+            <div id="country">
+                <input class="form" id="country" type="text" placeholder="Country" required pattern="[A-Za-z]">
+            </div>
+                <br>
             <div id="subr">
-                <button type="submit">Submit</button>
-                <button>Random</button>
+                <button class="form" type="submit">Submit</button>
+                <button class="form">Random</button>
             </div>
         </form>
-        <br>
-        <div id="uquiz">
-            <a href="../uQuiz/uQuiz.html">uQuiz</a>
-        </div>
+        <br><br><br>
+            <div style="text-align: center">
+                <button id="uquiz" onclick="window.location.href = '../uQuiz/uQuiz.html';">uQuiz</button>
+            </div>
         <br><br><br>
         </div>
         
