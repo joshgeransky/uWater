@@ -79,7 +79,8 @@
             <br>
             <form>
             <div id="country">
-                <input class="form" id="country" type="text" placeholder="Country" required pattern="[A-Za-z]">
+                <input class="form" id="country" type="text" placeholder="Country" minlength="0"
+                       maxlength="40" pattern="[A-Za-z]{0,40}">
             </div>
                 <br>
             <div id="subr">
