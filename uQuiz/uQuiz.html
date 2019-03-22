@@ -101,13 +101,33 @@
     <img src="../images/globe.png" alt="The earth is actually flat! Don't believe the media!">
 
 </section>
+
+<script type="text/javascript">
+
+function generateCountry() {
+var rand = Math.floor(Math.random() * 2 + 1);
+console.log("random is: " + rand);
+	if(rand == 1) {
+		if(confirm("Argentina is the correct country")){
+		console.log("ID1 is the correct answer");
+	}
+	}
+	else if(rand == 2) {
+	if(confirm("Belgium is the correct country")){
+		console.log("ID2 is the correct answer");
+		}
+}
+};
+</script>
 <div id ="prompt">
 <h1> What is this country?</h1>
 <form>
 	<select name="country">
-		<option value="Argentina">Argentina</option>
-		<option value="Belgium">Belguim</option>
+		<option id="1" value="Argentina">Argentina</option>
+		<option id="2" value="Belgium">Belguim</option>
 	</select>
+	<br><br>
+	<input type="submit" onclick="generateCountry()" value="Submit">
 </form>
 <h1>Is the water clean?</h1>
  <form>
