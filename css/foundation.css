@@ -64,6 +64,6 @@ footer {
     text-align: center;
     font-size: 10pt;
     background-color: lightGray;
-    padding: 20px;
-    
+    /*padding: 20px;*/
+    border: solid 20px lightGray;
 }
