@@ -76,7 +76,21 @@
 	position: auto;
 	display: block;
 	}
-	
+	@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to { 
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+#globe {
+    -webkit-animation-name:            rotate; 
+    -webkit-animation-duration:        0.5s; 
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
   
   </style>
 <body>
@@ -98,7 +112,7 @@
  </div>
 <br><br><br><br><br><br>
 <section>
-    <img src="../images/globe.png" alt="The earth is actually flat! Don't believe the media!">
+    <img src="../images/globe.png" id="globe" alt="The earth is actually flat! Don't believe the media!">
 
 </section>
 
