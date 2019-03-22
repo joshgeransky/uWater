@@ -1,103 +1,94 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>uWater</title>
-        <link rel="stylesheet" type="text/css" href="../css/foundation.css"/>
-        <style>
-            #safe {
-                text-align: center;
-            }
-            #country {
-                text-align: center;
-            }
-            #uSearchTitle {
-                clear: both;
-                text-align: center;
-            }
-            #subr {
-                text-align: center;
-            }
-            #uquiz {
-                text-align: center;
-                line-height: 90px;
-                width: 170px;
-                height: 90px;
-                background-color: grey;
-                font-size: 130%;
-                font-weight: bold;
-                margin-left: auto;
-                margin-right: auto;     
-            }
-            #copyright {
-               
-				text-align: center;
-				bottom: 0;
-				width: 100%;
-				font-size: 0.8em;
-                
-            }
-            .hlinks {
-                text-decoration: none;
-            }
-            .form {
-                border-radius: 100px;
-                padding: 8px 20px;
-            }
-            a:visited{
-                color: none;
-                
-            }
-            a:hover {
-                
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-        <div class="div-header">
-                
+   <head>
+      <meta charset="utf-8">
+      <title>uWater</title>
+      <link rel="stylesheet" type="text/css" href="../css/foundation.css"/>
+      <style>
+         #safe {
+         text-align: center;
+         }
+         #country {
+         text-align: center;
+         }
+         #uSearchTitle {
+         clear: both;
+         text-align: center;
+         }
+         #subr {
+         text-align: center;
+         }
+         #uquiz {
+         text-align: center;
+         line-height: 90px;
+         width: 170px;
+         height: 90px;
+         background-color: grey;
+         font-size: 130%;
+         font-weight: bold;
+         margin-left: auto;
+         margin-right: auto;     
+         }
+         #copyright {
+         text-align: center;
+         bottom: 0;
+         width: 100%;
+         font-size: 0.8em;
+         }
+         .hlinks {
+         text-decoration: none;
+         }
+         .form {
+         border-radius: 100px;
+         padding: 8px 20px;
+         }
+         a:visited{
+         color: none;
+         }
+         a:hover {
+         }
+      </style>
+   </head>
+   <body>
+      <header>
+         <div class="div-header">
             <span id="logo">
-                <a href="../uSearch/uSearch.html"><img src="../images/origLogo.png" alt="uWater"></a>
+            <a href="../uSearch/uSearch.html"><img src="../images/origLogo.png" alt="uWater"></a>
             </span>
-                            
             <nav id="menu">
-                <ul>
-                    <li><a href="../uSearch/uSearch.html">uSearch</a></li>
-                    <li><a href="../uQuiz/uQuiz.html">uQuiz</a></li>
-                </ul>
+               <ul>
+                  <li><a href="../uSearch/uSearch.html">uSearch</a></li>
+                  <li><a href="../uQuiz/uQuiz.html">uQuiz</a></li>
+               </ul>
             </nav>
-        </div>
-    </header>
-        <div class="content">
-        
-            <div class="title">
-                <h1 id="uSearchTitle">uSearch</h1>
-                <br>
-            </div>
-            <div id="safe">"Is your water safe?"</div>
+         </div>
+      </header>
+      <div class="content">
+         <div class="title">
+            <h1 id="uSearchTitle">uSearch</h1>
             <br>
-            <form>
+         </div>
+         <div id="safe">"Is your water safe?"</div>
+         <br>
+         <form>
             <div id="country">
-                <input class="form" id="country" type="text" placeholder="Country" minlength="0"
-                       maxlength="40" pattern="[A-Za-z]{0,40}">
+               <input class="form" id="country" type="text" placeholder="Country" minlength="0"
+                  maxlength="40" pattern="[A-Za-z]{0,40}">
             </div>
-                <br>
+            <br>
             <div id="subr">
-                <button class="form" type="submit">Submit</button>
-                <button class="form">Random</button>
+               <button class="form" type="submit">Submit</button>
+               <button class="form">Random</button>
             </div>
-        </form>
-        <br><br><br>
-            <div style="text-align: center">
-                <button id="uquiz" onclick="window.location.href = '../uQuiz/uQuiz.html';">uQuiz</button>
-            </div>
-        <br><br><br>
-            
-        </div>
-        
-        <footer>
-            <span>© Copyright 2019 Team 21</span>
-        </footer>
-    </body>
+         </form>
+         <br><br><br>
+         <div style="text-align: center">
+            <button id="uquiz" onclick="window.location.href = '../uQuiz/uQuiz.html';">uQuiz</button>
+         </div>
+         <br><br><br>
+      </div>
+      <footer>
+         <span>© Copyright 2019 Team 21</span>
+      </footer>
+   </body>
 </html>
