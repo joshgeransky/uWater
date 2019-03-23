@@ -96,8 +96,8 @@
              
             <br>
             <div id="subr">
-               <button class="form" type="submit">Submit</button>
-               <button class="form">Random</button>
+               <button id="submit" class="form" type="submit" onclick="window.location.href = '../uFacts/uFacts.html';">Submit</button>
+               <button class="form" onclick="window.location.href = '../uFacts/uFacts.html';">Random</button>
             </div>
          </form>
          <br><br><br>
@@ -109,5 +109,14 @@
       <footer>
          <span>© Copyright 2019 Team 21</span>
       </footer>
+        <script>
+            var input = document.getElementById("submit");
+            input.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("myBtn").click();
+            }
+            });
+       </script>
    </body>
 </html>
