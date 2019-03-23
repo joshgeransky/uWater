@@ -112,10 +112,10 @@
         <script>
             var input = document.getElementById("submit");
             input.addEventListener("keyup", function(event) {
-            if (event.keyCode === 13) {
-            event.preventDefault();
-            document.getElementById("myBtn").click();
-            }
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    document.getElementById("submit").click();
+                }
             });
        </script>
    </body>
