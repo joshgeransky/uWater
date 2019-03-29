@@ -78,6 +78,12 @@ body, html, article {
   text-align: justify;
 }
 
+.article-section p {
+    
+    font-family: 'Montserrat';
+    
+}
+
 .article-subtitle {
   font-style: italic;
   display: block;
