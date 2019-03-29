@@ -84,25 +84,50 @@
 	position: auto;
 	display: block;
 	}
-	@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(270deg);
-  }
-  to { 
-    -webkit-transform: rotate(360deg);
+
+
+.globe {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+}
+
+.globe:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: -20px -20px 50px 2px #000 inset;
+  border-radius: 50%;
+}
+
+.globe > div {
+  width: 200%;
+  height: 100%;
+  animation: spin 10s alternate;
+  background: url(https://web.opendrive.com/api/v1/download/file.json/NTlfMTQ1MTkzNDhf?inline=1);
+  /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
+}
+@keyframes spin {
+  to {
+    transform: translateX(-50%);
   }
 }
 
-#globe {
-    -webkit-animation-name:            rotate; 
-    -webkit-animation-duration:        3s; 
-    -webkit-animation-iteration-count: 9s;
-    
-}
+
   
   </style>
 
-<body id ="b">
 <header>
             <div class="div-header">
                 
@@ -120,9 +145,13 @@
         </div>
         
         
-        </header>
-<body>
-    
+        </header><div class="globe">
+<div></div>
+</div>
+
+<body id = "b">
+ 
+
     <header class='header' data-animate-header-container>
 
 
@@ -142,11 +171,17 @@
 <button type="button" class ="button">Leader Board</button>
 </a>
  </div>
-<br><br><br><br><br><br>
+ 
+  <div class="globe">
+<div></div>
+</div>
+
+<!--
 <section>
     <img src="../images/globe.png" id="globe" alt="The earth is actually flat! Don't believe the media!">
 
 </section>
+-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript">
  var rand = Math.floor(Math.random() * 4 + 1);
@@ -201,21 +236,25 @@ $('#b').css("background-image", "url(../images/Denmark.jpg)");
 
 function checkAnswer() {
 		var x = document.getElementById("f").elements[0].value;
-		var y = document.getElementById("dv").innerHTML = x;
-		y.innerHTML= console.log(x);
-		if(x == rand) {
-			console.log("Good job!!!");
-			}
 		
+		if(x == rand) {
+			alert("Correct!");
+			
+			}
+		else {
+			alert("Sorry, your answer is wrong.");
+			
+			}
     }
  
 
 </script>
-    
+  
     
     
     <section class='article-section' data-animate-header-target>
 <div id ="prompt">
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
 <h1> What is this country?</h1>
 <form id="f">
 	<select name="country">
@@ -225,17 +264,18 @@ function checkAnswer() {
 		<option id="4" value="4">Denmark</option>
 		
 	</select>
-	<button onclick="checkAnswer()">Submit</button>
 	<br>
 </form>
 <div id="dv">
 </div>
-<br><br>
+<br>
 <h1>Is the water clean?</h1>
  <form>
  <input type="radio" name="yes" value="yes"> Yes<br>
  <input type="radio" name="no" value="no"> No<br>
  </form>
+ <button onclick="checkAnswer()">Submit</button>
+	<br>
  </div>
  </section>
 
