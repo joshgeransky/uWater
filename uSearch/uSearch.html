@@ -13,6 +13,7 @@
               color: white;
           }
          #safe {
+		 font-size: 2em;
          text-align: center;
          color: white;
          }
@@ -35,11 +36,24 @@
          color: black;
          }
          #bananas {
-         color: skyblue;
+	color: #9ce6fc;
          }
          #subr {
          text-align: center;
          }
+
+         #uquiz {
+         text-align: center;
+        color: #9ce6fc;
+         width: 100px;
+         height: 50px;
+         background-color: white;
+         font-size: 130%;
+         font-weight: bold;
+         margin-left: auto;
+         margin-right: auto;     
+         }
+
          #copyright {
          text-align: center;
          bottom: 0;
@@ -85,9 +99,13 @@
          a:visited{
          color: none;
          }
-         a:hover {
-             color: skyblue;
-         }
+		 #visitors {
+		 font-size: 2em;
+		 
+		 }
+		 #tally {
+		 font-size: 2em;
+		 }
       </style>
    </head>
    <body>
@@ -119,30 +137,32 @@
              <div id="ghgh">
              
             <div id="country">
-               <input class="form" id="country" type="text" 
-                      
-                      onfocus="this.placeholder = ''"
-                      placeholder="Enter Country"
-                      onblur="this.placeholder = 'Enter Country'"
-                      
-                      minlength="0"
-                  maxlength="40" pattern="[A-Za-z]{0,40}">
+               <input class="form" id="country" type="text" onfocus="this.placeholder = ''" placeholder="Enter Country" onblur="this.placeholder = 'Enter Country'" minlength="0" maxlength="40" pattern="[A-Za-z]{0,40}">
             </div>
              
              </div>
              
             <br>
+             
             <div id="subr">
-               <button id="submitButton" class="buttons" onclick="window.location.href = '../uQuiz/uQuiz.html';">Submit</button>
-               <button class="buttons" onclick="window.location.href='uFacts.html';">Random</button>
+                <!-- fix these buttons -->
+               <button id="submitButton" class="buttons" type="submit" onclick="window.location.href = '../uQuiz/uQuiz.html';">Submit</button>
+               <button class="buttons" onclick="window.location.href='../uQuiz/uQuiz.html';">Random</button>
             </div>
-         </form>
+         </form> 
          <br><br><br>
          <div style="text-align: center">
             <button id="uquiz" onclick="window.location.href = '../uQuiz/uQuiz.html';">uQuiz</button>
-              </div></section>
+             <br><br><br> <p id="visitors"> 
+		Total number of visitors:<div id="tally">50(in a div)</div>
+		</p>	 
+		   
+			  </div></section>
          <br><br><br>
-           </div></article>
+           </div>
+		   </article>
+		 
+		   
       <footer>
          <span>© 2019 Team 21</span>
       </footer>
