@@ -17,7 +17,7 @@
          color: white;
          }
          #country {
-         
+            
          }
           #ghgh {
               text-align: center;
@@ -35,21 +35,10 @@
          color: black;
          }
          #bananas {
-         color: magenta;
+         color: skyblue;
          }
          #subr {
          text-align: center;
-         }
-         #uquiz {
-         text-align: center;
-         line-height: 90px;
-         width: 170px;
-         height: 90px;
-         background-color: white;
-         font-size: 130%;
-         font-weight: bold;
-         margin-left: auto;
-         margin-right: auto;     
          }
          #copyright {
          text-align: center;
@@ -60,9 +49,28 @@
          .hlinks {
          text-decoration: none;
          }
-         .form {
-         border-radius: 100px;
+          .form {
+         border-radius: 12px;
          padding: 8px 20px;
+        background-color: white;
+              
+         }
+         .buttons {
+         border-radius: 12px;
+         padding: 8px 20px;
+        background-color: white;
+         }
+          #uquiz {
+         text-align: center;
+         line-height: 90px;
+         width: 170px;
+         height: 90px;
+         background-color: white;
+         font-size: 130%;
+         font-weight: bold;
+         margin-left: auto;
+         margin-right: auto;     
+        border-radius: 12px;
          }
          a:visited{
          color: none;
@@ -103,7 +111,7 @@
                <input class="form" id="country" type="text" 
                       
                       onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Enter Country'"
+                      placeholder="Enter Country"
                       
                       minlength="0"
                   maxlength="40" pattern="[A-Za-z]{0,40}">
@@ -113,13 +121,13 @@
              
             <br>
             <div id="subr">
-               <button id="submit" class="form" type="submit" onclick="window.location.href = '../uFacts/uFacts.html';">Submit</button>
-               <button class="form" onclick="window.location.href = '../uFacts/uFacts.html';">Random</button>
+               <button id="submit" class="buttons" type="submit" onclick="window.location.href='uFacts.html';">Submit</button>
+               <button class="buttons" onclick="window.location.href='uFacts.html';">Random</button>
             </div>
          </form>
          <br><br><br>
          <div style="text-align: center">
-            <button id="uquiz" onclick="window.location.href = '../uQuiz/uQuiz.html';">uQuiz</button>
+            <button id="uquiz" onclick="window.location.href = './uQuiz/uQuiz.html';">uQuiz</button>
               </div></section>
          <br><br><br>
            </div></article>
