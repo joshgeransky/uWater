@@ -199,18 +199,23 @@ console.log("random is: " + rand);
  function generateBackground(){
  if(rand == 1) {
 	$('#b').css("background-image", "url(../images/Argentina.jpg)");
+	$('#b').css("background-repeat", "no-repeat");
 	}
 if(rand == 2){
 	$('#b').css("background-image", "url(../images/Belgium.jpg)");
+	$('#b').css("background-repeat", "no-repeat");
 	}
 if(rand == 3){
 	$('#b').css("background-image", "url(../images/Vancouver_Canada.jpg)");
+	$('#b').css("background-repeat", "no-repeat");
 	}
 if(rand == 4){
 $('#b').css("background-image", "url(../images/Denmark.jpg)");
+$('#b').css("background-repeat", "no-repeat");
 }
 if(rand == 5){
 $('#b').css("background-image", "url(../images/Egypt.jpg)");
+$('#b').css("background-repeat", "no-repeat");
 }
   
  
@@ -251,6 +256,7 @@ function checkAnswer() {
 			alert("Sorry, your answer is wrong.");
 			
 			}
+			document.location.reload(true);
     }
  
 
