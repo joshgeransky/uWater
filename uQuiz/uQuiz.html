@@ -19,9 +19,7 @@
 	
 	}
    
-	
-	
-    #header { /* OLD */
+    #header {
 	font-weight: bold;
 		color: white;
 		background-color: gray;
@@ -125,9 +123,6 @@
   }
 }
 
-
-
-  
   </style>
 
 <header>
@@ -245,20 +240,64 @@ $('#b').css("background-repeat", "no-repeat");
 	
 });
 
+//argentina: yes
+//belgium: yes
+//canada: yes
+//denmark: yes
+//egypt: no
+	
 function checkAnswer() {
 		var x = document.getElementById("f").elements[0].value;
+		var radio = document.getElementById("fo");
+	
+		var no = document.getElementById("fo").checked;
 		
-		if(x == rand) {
-			alert("Correct!");
-			
+		var radioButtons = document.getElementsByName("cleanwater");
+for (var i = 0; i < radioButtons.length; i++) {
+    if (radioButtons[i].checked) {
+	if(rand == 1 || rand == 2 || rand == 3 || rand == 4) {  //all clean water
+			if(x == rand) {
+				alert("Correct country and it has clean water!!!");
 			}
-		else {
+			else {
 			alert("Sorry, your answer is wrong.");
 			
 			}
 			document.location.reload(true);
+        //console.log("radioButton " + i + ": " + radioButtons[i].value);
     }
+}
+		/**
+		alert(yes);
+		if(rand == 1 || rand == 2 || rand == 3 || rand == 4) {  //all clean water
+			if(x == rand && yes == true) {
+				alert("Correct country and it has clean water!!!");
+			}
+			else {
+			alert("Sorry, your answer is wrong.");
+			
+			}
+			document.location.reload(true);
+		} else { //unclean water
+			if(x == rand && yes == false) {
+				alert("Correct, you guessed the correct country and it has unsafe water.");
+			}
+			else {
+			alert("Sorry, your answer is wrong.");
+			
+			}
+			*/
+			//document.location.reload(true);
+		}
+}
  
+ function yesCheck() {
+ document.getElementById("fo").checked = true;
+ }
+ 
+ function noCheck() {
+ document.getElementById("fo").checked = true;
+ }
 
 </script>
   
@@ -270,11 +309,11 @@ function checkAnswer() {
 <h1> What is this country?</h1>
 <form id="f">
 	<select name="country">
-		<option id="1" value="1">Argentina</option>
-		<option id="2" value="2">Belguim</option>
-		<option id="3" value="3">Canada</option>
-		<option id="4" value="4">Denmark</option>
-		<option id="5" value="5">Egypt</option>
+		<option id="1" value="1" name="Argentina">Argentina</option>
+		<option id="2" value="2" name="Belgium">Belguim</option>
+		<option id="3" value="3" name="Canada">Canada</option>
+		<option id="4" value="4" name="Denmark">Denmark</option>
+		<option id="5" value="5" name="Egypt">Egypt</option>
 		
 	</select>
 	<br>
@@ -283,8 +322,8 @@ function checkAnswer() {
 </div>
 <br>
 <h1>Is the water clean?</h1>
- <form>
- <input type="radio" name="cleanwater" value="yes"> Yes<br>
+ <form id="fo">
+ <input type="radio" name="cleanwater" value="yes" checked> Yes<br>
  <input type="radio" name="cleanwater" value="no"> No<br>
  </form>
  <button onclick="checkAnswer()">Submit</button>
