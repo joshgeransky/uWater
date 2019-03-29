@@ -85,9 +85,6 @@
          a:visited{
          color: none;
          }
-         a:hover {
-             color: skyblue;
-         }
       </style>
    </head>
    <body>
@@ -119,24 +116,19 @@
              <div id="ghgh">
              
             <div id="country">
-               <input class="form" id="country" type="text" 
-                      
-                      onfocus="this.placeholder = ''"
-                      placeholder="Enter Country"
-                      onblur="this.placeholder = 'Enter Country'"
-                      
-                      minlength="0"
-                  maxlength="40" pattern="[A-Za-z]{0,40}">
+               <input class="form" id="country" type="text" onfocus="this.placeholder = ''" placeholder="Enter Country" onblur="this.placeholder = 'Enter Country'" minlength="0" maxlength="40" pattern="[A-Za-z]{0,40}">
             </div>
              
              </div>
              
             <br>
+             
             <div id="subr">
-               <button id="submitButton" class="buttons" onclick="window.location.href = '../uQuiz/uQuiz.html';">Submit</button>
-               <button class="buttons" onclick="window.location.href='uFacts.html';">Random</button>
+                <!-- fix these buttons -->
+               <button id="submitButton" class="buttons" type="submit" onclick="window.location.href = '../uQuiz/uQuiz.html';">Submit</button>
+               <button class="buttons" onclick="window.location.href='../uQuiz/uQuiz.html';">Random</button>
             </div>
-         </form>
+         </form> 
          <br><br><br>
          <div style="text-align: center">
             <button id="uquiz" onclick="window.location.href = '../uQuiz/uQuiz.html';">uQuiz</button>
