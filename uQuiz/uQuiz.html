@@ -29,6 +29,7 @@
 	}
       #uQuiz-title {
           font-size: 48pt;
+		  padding-bottom: 50px;
       }
       
 	a {
@@ -125,6 +126,7 @@
 }
 
 
+
   
   </style>
 
@@ -165,8 +167,9 @@
 </header>
 
 <div id="leader">
- <br><br><br><br>
+<br><br><br>
         <h1 id='uQuiz-title'>uQuiz</h1>
+		
  <a class="button" href="../uBoard/uBoard.html">
 <button type="button" class ="button">Leader Board</button>
 </a>
@@ -184,7 +187,7 @@
 -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript">
- var rand = Math.floor(Math.random() * 4 + 1);
+ var rand = Math.floor(Math.random() * 5 + 1);
  $(document).ready(function() {
  
  function generateRandom() {
@@ -206,7 +209,10 @@ if(rand == 3){
 if(rand == 4){
 $('#b').css("background-image", "url(../images/Denmark.jpg)");
 }
- 
+if(rand == 5){
+$('#b').css("background-image", "url(../images/Egypt.jpg)");
+}
+  
  
  }
  generateBackground();
@@ -262,6 +268,7 @@ function checkAnswer() {
 		<option id="2" value="2">Belguim</option>
 		<option id="3" value="3">Canada</option>
 		<option id="4" value="4">Denmark</option>
+		<option id="5" value="5">Egypt</option>
 		
 	</select>
 	<br>
@@ -271,8 +278,8 @@ function checkAnswer() {
 <br>
 <h1>Is the water clean?</h1>
  <form>
- <input type="radio" name="yes" value="yes"> Yes<br>
- <input type="radio" name="no" value="no"> No<br>
+ <input type="radio" name="cleanwater" value="yes"> Yes<br>
+ <input type="radio" name="cleanwater" value="no"> No<br>
  </form>
  <button onclick="checkAnswer()">Submit</button>
 	<br>
