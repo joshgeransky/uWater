@@ -12,8 +12,15 @@
 	body { 
 	 /*font-family: 'Montserrat'; */
 	background-color: #ebeef4;
-	background-image: none;
+	background-size: 100%;
+	width: 100%
+	background-repeat: no-repeat;
+	color: white;
+	
 	}
+   
+	
+	
     #header { /* OLD */
 	font-weight: bold;
 		color: white;
@@ -22,6 +29,7 @@
 	}
       #uQuiz-title {
           font-size: 48pt;
+		  padding-bottom: 50px;
       }
       
 	a {
@@ -41,7 +49,6 @@
 	footer {
 	text-align: center;
 	bottom: 0;
-	width: 100%;
 	font-size: 0.8em;
 	}
 	section {
@@ -68,12 +75,8 @@
 	#anchor {
 	float: right;
 	}
-	#logo {
-		 padding-top: 0px;
-                border: 20px solid lightGray;
-                padding-bottom: 50px;
-                background-color: lightGray;
-	}
+	
+	
 	#logo > a > img {
 		position:absolute;left:0px; top:0px;
 		
@@ -82,26 +85,77 @@
 	position: auto;
 	display: block;
 	}
-	@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(270deg);
-  }
-  to { 
-    -webkit-transform: rotate(360deg);
+
+
+.globe {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+}
+
+.globe:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: -20px -20px 50px 2px #000 inset;
+  border-radius: 50%;
+}
+
+.globe > div {
+  width: 200%;
+  height: 100%;
+  animation: spin 10s alternate;
+  background: url(https://web.opendrive.com/api/v1/download/file.json/NTlfMTQ1MTkzNDhf?inline=1);
+  /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
+}
+@keyframes spin {
+  to {
+    transform: translateX(-50%);
   }
 }
 
-#globe {
-    -webkit-animation-name:            rotate; 
-    -webkit-animation-duration:        3s; 
-    -webkit-animation-iteration-count: 9s;
-    
-}
+
+
   
   </style>
-<body>
-    
+
+<header>
+            <div class="div-header">
+                
+                <div id="logo">
+                  
+                  
+                </div>
+                            
+            <nav id="menu">
+                <ul>
+                    <li><a href="../uSearch/uSearch.html">uSearch</a></li>
+                    <li><a href="../uQuiz/uQuiz.html">uQuiz</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        
+        </header><div class="globe">
+<div></div>
+</div>
+
+<body id = "b">
+ 
+
     <header class='header' data-animate-header-container>
+
 
 	<!-- [data-animate-header] - this is the actual element that will be fixed/animated -->
 	<menu class='header-bar' data-animate-header>
@@ -113,57 +167,125 @@
 </header>
 
 <div id="leader">
- <br><br><br><br>
+<br><br><br>
         <h1 id='uQuiz-title'>uQuiz</h1>
+		
  <a class="button" href="../uBoard/uBoard.html">
 <button type="button" class ="button">Leader Board</button>
 </a>
  </div>
-<br><br><br><br><br><br>
+ 
+  <div class="globe">
+<div></div>
+</div>
+
+<!--
 <section>
     <img src="../images/globe.png" id="globe" alt="The earth is actually flat! Don't believe the media!">
 
 </section>
-
+-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript">
-
-function generateCountry() {
-var rand = Math.floor(Math.random() * 2 + 1);
+ var rand = Math.floor(Math.random() * 5 + 1);
+ $(document).ready(function() {
+ 
+ function generateRandom() {
 console.log("random is: " + rand);
-	if(rand == 1) {
-		if(confirm("Argentina is the correct country")){
-		console.log("ID1 is the correct answer");
+ 
+ }
+ generateRandom();
+ 
+ function generateBackground(){
+ if(rand == 1) {
+	$('#b').css("background-image", "url(../images/Argentina.jpg)");
 	}
+if(rand == 2){
+	$('#b').css("background-image", "url(../images/Belgium.jpg)");
 	}
-	else if(rand == 2) {
-	if(confirm("Belgium is the correct country")){
-		console.log("ID2 is the correct answer");
-		}
+if(rand == 3){
+	$('#b').css("background-image", "url(../images/Vancouver_Canada.jpg)");
+	}
+if(rand == 4){
+$('#b').css("background-image", "url(../images/Denmark.jpg)");
 }
-};
+if(rand == 5){
+$('#b').css("background-image", "url(../images/Egypt.jpg)");
+}
+  
+ 
+ }
+ generateBackground();
+ 
+	
+
+
+
+	
+	/**
+		if(rand == 1) {
+			if(confirm("Argentina is the correct country")){
+			console.log("ID1 is the correct answer");
+			}
+		}
+		else if(rand == 2) {
+			if(confirm("Belgium is the correct country")){
+			console.log("ID2 is the correct answer");
+			}
+		}
+		*/
+	
+	
+	
+	
+});
+
+function checkAnswer() {
+		var x = document.getElementById("f").elements[0].value;
+		
+		if(x == rand) {
+			alert("Correct!");
+			
+			}
+		else {
+			alert("Sorry, your answer is wrong.");
+			
+			}
+    }
+ 
+
 </script>
-    
+  
     
     
     <section class='article-section' data-animate-header-target>
 <div id ="prompt">
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
 <h1> What is this country?</h1>
-<form>
+<form id="f">
 	<select name="country">
-		<option id="1" value="Argentina">Argentina</option>
-		<option id="2" value="Belgium">Belguim</option>
+		<option id="1" value="1">Argentina</option>
+		<option id="2" value="2">Belguim</option>
+		<option id="3" value="3">Canada</option>
+		<option id="4" value="4">Denmark</option>
+		<option id="5" value="5">Egypt</option>
+		
 	</select>
-	<br><br>
-	<input type="submit" onclick="generateCountry()" value="Submit">
+	<br>
 </form>
+<div id="dv">
+</div>
+<br>
 <h1>Is the water clean?</h1>
  <form>
- <input type="radio" name="yes" value="yes"> Yes<br>
- <input type="radio" name="no" value="no"> No<br>
+ <input type="radio" name="cleanwater" value="yes"> Yes<br>
+ <input type="radio" name="cleanwater" value="no"> No<br>
  </form>
+ <button onclick="checkAnswer()">Submit</button>
+	<br>
  </div>
-    </section>
- <br><br>
+ </section>
+
  <footer>
  © 2019 Team 21
  </footer>
