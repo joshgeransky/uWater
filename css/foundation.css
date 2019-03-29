@@ -152,7 +152,7 @@ footer {
    /* width: 100%; ummmmmm this line causes the footer in uSearch to be fked*/
  /*   background-color: #163466; */
     border: solid 20px rgba(0, 0, 0, 0);
-    background: rgba(0, 0, 0, 0.5);
+   /* background: rgba(0, 0, 0, 0.5); */
 
     bottom: 0;
     left: 0;
