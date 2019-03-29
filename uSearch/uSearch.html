@@ -113,8 +113,8 @@
              
             <br>
             <div id="subr">
-               <button class="form" type="submit">Submit</button>
-               <button class="form">Random</button>
+               <button id="submit" class="form" type="submit" onclick="window.location.href = '../uFacts/uFacts.html';">Submit</button>
+               <button class="form" onclick="window.location.href = '../uFacts/uFacts.html';">Random</button>
             </div>
          </form>
          <br><br><br>
@@ -126,11 +126,23 @@
       <footer>
          <span>© 2019 Team 21</span>
       </footer>
+<<<<<<< HEAD
        
        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js'></script>
 
     <script src="../js/index.js"></script>
 
+=======
+        <script>
+            var input = document.getElementById("submit");
+            input.addEventListener("keyup", function(event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    document.getElementById("submit").click();
+                }
+            });
+       </script>
+>>>>>>> 5fa382f9694852d367b402da4f812175b815caea
    </body>
 </html>
