@@ -74,7 +74,7 @@ footer {
     color: white;
     text-align: center;
     font-size: 10pt;
-    width: 100%;
+   /* width: 100%; ummmmmm this line causes the footer in uSearch to be fked*/
  /*   background-color: #163466; */
     border: solid 20px rgba(0, 0, 0, 0);
     background: rgba(0, 0, 0, 0.5);
