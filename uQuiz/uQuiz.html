@@ -6,22 +6,37 @@
   </head>
     <link rel="stylesheet" type="text/css" href="../css/foundation.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
   <style>
-	body {
-	 font-family: 'Montserrat';
+	body { 
+	 /*font-family: 'Montserrat'; */
 	background-color: #ebeef4;
+	background-size: 100%;
+	width: 100%
+	background-repeat: no-repeat;
 	color: white;
 	
 	}
    
+	
+	
+    #header { /* OLD */
+	font-weight: bold;
+		color: white;
+		background-color: gray;
+		font-size: 2.5em;
+	}
+      #uQuiz-title {
+          font-size: 48pt;
+      }
+      
 	a {
 		
 		text-decoration: none;
 		color: black;
 		}
-	#anchor {
-	text-align: right;
-	}
+
 	p{
 	font-weight: bold;
 	font-size: 2em;
@@ -39,6 +54,7 @@
 		text-align: center;
 	}
 	.button {
+
 		 background-color: #33518e;
   border: none;
   color: white;
@@ -85,12 +101,14 @@
 }
   
   </style>
+
 <body id ="b">
 <header>
             <div class="div-header">
                 
                 <div id="logo">
-                    <a href="../uSearch/uSearch.html"><img src="../images/whiteLogo.png" alt="uWater"></a>
+                  
+                  
                 </div>
                             
             <nav id="menu">
@@ -103,11 +121,23 @@
         
         
         </header>
+<body>
+    
+    <header class='header' data-animate-header-container>
 
 
-<p>uQuiz</p>
+	<!-- [data-animate-header] - this is the actual element that will be fixed/animated -->
+	<menu class='header-bar' data-animate-header>
+        <a href='../uSearch/uSearch.html' class='btn-search' data-toggle-class='search-active'>uSearch</a>
+		<a href='#uWater' class='btn-menu' data-toggle-class='menu-active'>uWater</a>
+        <a href='../uQuiz/uQuiz.html' class='btn-search' data-toggle-class='search-active'>uQuiz</a>
+
+	</menu>
+</header>
+
 <div id="leader">
- 
+ <br><br><br><br>
+        <h1 id='uQuiz-title'>uQuiz</h1>
  <a class="button" href="../uBoard/uBoard.html">
 <button type="button" class ="button">Leader Board</button>
 </a>
@@ -181,6 +211,10 @@ function checkAnswer() {
  
 
 </script>
+    
+    
+    
+    <section class='article-section' data-animate-header-target>
 <div id ="prompt">
 <h1> What is this country?</h1>
 <form id="f">
@@ -206,12 +240,22 @@ function checkAnswer() {
  <br><br>
 
  </div>
+
  <br><br><br>
  
+
+    </section>
+ <br><br>
+
  <footer>
- © Copyrighted Team 21 2019
+ © 2019 Team 21
  </footer>
 </body>
  
- 
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js'></script>
+    <script src="../js/index.js"></script>
+
+    
+    
 </html>

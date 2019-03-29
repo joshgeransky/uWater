@@ -5,6 +5,13 @@
       <title>uWater</title>
       <link rel="stylesheet" type="text/css" href="../css/foundation.css"/>
       <style>
+          body {
+              background-image: url(../images/ocean_waves.jpg);
+              background-repeat: none;
+              background-size: cover;
+              background-color: black;
+              color: white;
+          }
          #safe {
          text-align: center;
          color: white;
@@ -15,10 +22,17 @@
           #ghgh {
               text-align: center;
           }
+          #logo {
+              width: 400px;
+              height: auto;
+          }
+          .title {
+              text-align: center;
+          }
          #uSearchTitle {
          clear: both;
          text-align: center;
-         color: white;
+         color: black;
          }
          #bananas {
          color: magenta;
@@ -58,22 +72,25 @@
       </style>
    </head>
    <body>
-      <header>
-         <div class="div-header">
-            <span id="logo">
-            <a href="../uSearch/uSearch.html"><img src="../images/whiteLogo.png" alt="uWater"></a>
-            </span>
-            <nav id="menu">
-               <ul>
-                  <li><a href="../uSearch/uSearch.html">uSearch</a></li>
-                  <li><a href="../uQuiz/uQuiz.html">uQuiz</a></li>
-               </ul>
-            </nav>
-         </div>
-      </header>
+
+       <header class='header' data-animate-header-container>
+
+	<!-- [data-animate-header] - this is the actual element that will be fixed/animated -->
+	<menu class='header-bar' data-animate-header>
+        <a href='../uSearch/uSearch.html' class='btn-search' data-toggle-class='search-active'>uSearch</a>
+		<a href='#uWater' class='btn-menu' data-toggle-class='menu-active'>uWater</a>
+        <a href='../uQuiz/uQuiz.html' class='btn-search' data-toggle-class='search-active'>uQuiz</a>
+
+	</menu>
+</header>
+       
+       
+       <article class='article'>
       <div class="content">
+          <section class="article-section">
          <div class="title">
-            <h1 id="uSearchTitle">uSearch</h1>
+         <!---   <h1 id="uSearchTitle">uSearch</h1> -->
+             <img id='logo' alt='uWater' src='../images/whiteLogo.png'>
             <br>
          </div>
          <div id="safe">"Is yo<span id="bananas">u</span>r <span id="bananas">water</span> safe?"</div>
@@ -103,12 +120,20 @@
          <br><br><br>
          <div style="text-align: center">
             <button id="uquiz" onclick="window.location.href = '../uQuiz/uQuiz.html';">uQuiz</button>
-         </div>
+              </div></section>
          <br><br><br>
-      </div>
+           </div></article>
       <footer>
-         <span>© Copyright 2019 Team 21</span>
+         <span>© 2019 Team 21</span>
       </footer>
+
+       
+       <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js'></script>
+
+    <script src="../js/index.js"></script>
+
+
         <script>
             var input = document.getElementById("submit");
             input.addEventListener("keyup", function(event) {
@@ -118,5 +143,6 @@
                 }
             });
        </script>
+
    </body>
 </html>
