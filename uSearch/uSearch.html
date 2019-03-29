@@ -18,7 +18,7 @@
          color: white;
          }
          #country {
-         
+            
          }
           #ghgh {
               text-align: center;
@@ -36,15 +36,15 @@
          color: black;
          }
          #bananas {
-	
-         color: #9ce6fc;
+	color: #9ce6fc;
          }
          #subr {
          text-align: center;
          }
+
          #uquiz {
          text-align: center;
-        
+        color: #9ce6fc;
          width: 100px;
          height: 50px;
          background-color: white;
@@ -53,6 +53,7 @@
          margin-left: auto;
          margin-right: auto;     
          }
+
          #copyright {
          text-align: center;
          bottom: 0;
@@ -62,14 +63,41 @@
          .hlinks {
          text-decoration: none;
          }
-         .form {
-         border-radius: 100px;
+          .form {
+         border-radius: 12px;
          padding: 8px 20px;
+        background-color: white;
+              
          }
+         .buttons {
+         border-radius: 12px;
+         padding: 8px 20px;
+        background-color: white;
+             transition: 0.3s;
+         }
+          .buttons:hover{
+              background-color: #4286f4;
+              cursor: pointer;
+          }
+          #uquiz {
+         text-align: center;
+         line-height: 90px;
+         width: 170px;
+         height: 90px;
+         background-color: white;
+         font-size: 130%;
+         font-weight: bold;
+         margin-left: auto;
+         margin-right: auto;     
+        border-radius: 12px;
+              transition: 0.3s;
+         }
+          #uquiz:hover{
+              background-color: #4286f4;
+              cursor: pointer;
+          }
          a:visited{
          color: none;
-         }
-         a:hover {
          }
       </style>
    </head>
@@ -102,23 +130,19 @@
              <div id="ghgh">
              
             <div id="country">
-               <input class="form" id="country" type="text" 
-                      
-                      onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Enter Country'"
-                      
-                      minlength="0"
-                  maxlength="40" pattern="[A-Za-z]{0,40}">
+               <input class="form" id="country" type="text" onfocus="this.placeholder = ''" placeholder="Enter Country" onblur="this.placeholder = 'Enter Country'" minlength="0" maxlength="40" pattern="[A-Za-z]{0,40}">
             </div>
              
              </div>
              
             <br>
+             
             <div id="subr">
-               <button id="submit" class="form" type="submit" onclick="window.location.href = '../uFacts/uFacts.html';">Submit</button>
-               <button class="form" onclick="window.location.href = '../uFacts/uFacts.html';">Random</button>
+                <!-- fix these buttons -->
+               <button id="submitButton" class="buttons" type="submit" onclick="window.location.href = '../uQuiz/uQuiz.html';">Submit</button>
+               <button class="buttons" onclick="window.location.href='../uQuiz/uQuiz.html';">Random</button>
             </div>
-         </form>
+         </form> 
          <br><br><br>
          <div style="text-align: center">
             <button id="uquiz" onclick="window.location.href = '../uQuiz/uQuiz.html';">uQuiz</button>
@@ -137,13 +161,30 @@
 
 
         <script>
-            var input = document.getElementById("submit");
+            
+            
+          /*  var input = document.getElementById("submit");
             input.addEventListener("keyup", function(event) {
                 if (event.keyCode === 13) {
                     event.preventDefault();
                     document.getElementById("submit").click();
                 }
-            });
+                
+                
+
+                 
+            }); */
+                        
+         /*   submit.addEventListener("click", function() {
+                                   
+                                    window.location = '../uFacts/uFacts.html';
+                                   
+            }); */
+      /*      
+            function submitCountry() {
+                console.log("hello");
+            } */
+            
        </script>
 
    </body>

@@ -3,6 +3,8 @@ $(function() {
     waypoints.init();
 })
 
+
+
 var waypoints = {
     init: function() {
         // container - used for toggling classes to animate content
