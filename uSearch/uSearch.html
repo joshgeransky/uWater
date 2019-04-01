@@ -107,6 +107,19 @@
 		 font-size: 2em;
 		 }
       </style>
+       <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyBEfupg1Yxv54gWoZClRtOIgipjw-JoG5I",
+            authDomain: "uwater-a3a85.firebaseapp.com",
+            databaseURL: "https://uwater-a3a85.firebaseio.com",
+            projectId: "uwater-a3a85",
+            storageBucket: "uwater-a3a85.appspot.com",
+            messagingSenderId: "89656858094"
+          };
+          firebase.initializeApp(config);
+        </script>
    </head>
    <body>
 
@@ -154,14 +167,22 @@
          </form> 
          <br><br><br>
          <div style="text-align: center">
-<<<<<<< HEAD
-            <button id="uquiz" onclick="window.location.href = '../uQuiz/uQuiz.html'">uQuiz</button>
+
+
               </div></section>
 
+<<<<<<< HEAD
             <button id="uquiz" onclick="window.location.href = '../uQuiz/uQuiz.html';">uQuiz</button>
              <br><br><br> <p id="visitors"> 
 		Total number of visitors:<div id="tally">50(in a div)</div>
 		</p>	 
+
+            <button id="uquiz" onclick="window.location.href = '../uQuiz/uQuiz.html'">uQuiz</button>
+             <br><br><br> 
+             
+             <div><span id="visitors"> 
+		Total number of visitors:<div id="tally"></div>
+                </span>	 </div>
 		   
 			  </div></section>
 
@@ -169,24 +190,17 @@
            </div>
 		   </article>
 		 
-		   <p id="test"></p>
+		   <p id="test"></p> <!-- firebase test -->
       <footer>
          <span>© 2019 Team 21</span>
       </footer>
-       <!-- firebase -->
-       <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
-<script>
-  // Firebase
-  var config = {
-    apiKey: "AIzaSyBEfupg1Yxv54gWoZClRtOIgipjw-JoG5I",
-    authDomain: "uwater-a3a85.firebaseapp.com",
-    databaseURL: "https://uwater-a3a85.firebaseio.com",
-    projectId: "uwater-a3a85",
-    storageBucket: "uwater-a3a85.appspot.com",
-    messagingSenderId: "89656858094"
-  };
-  firebase.initializeApp(config);
-    database = firebase.database();
+       
+<script> // Firebase
+    var out = document.getElementById("test");
+    var dbRef = firebase.database().ref().child("Canada");
+    dbRef.on ('value', function (snap) {
+                    out.innerText = snap.val();
+                    });
     
     
     var leadsRef = database.ref('Canada');
@@ -220,7 +234,7 @@
 
         <script>
             
-          /*  var input = document.getElementById("submit");
+            var input = document.getElementById("submit");
             input.addEventListener("keyup", function(event) {
                 if (event.keyCode === 13) {
                     event.preventDefault();
@@ -230,7 +244,7 @@
                 
 
                  
-            }); */
+            }); 
             
       /*      
             function submitCountry() {
