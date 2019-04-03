@@ -211,11 +211,12 @@
             var ref = firebase.database().ref();
 
 ref.on("value", function(snapshot) {
+
    console.log(snapshot.val());
 }, function (error) {
    console.log("Error: " + error.code);
 });
-            });
+            
             
             //other stuff
             var submit = document.getElementById("submitButton");      
@@ -224,10 +225,6 @@ ref.on("value", function(snapshot) {
                                     window.location = '../uFacts/uFacts.html';
                                    
             });
-      /*      
-            function submitCountry() {
-                console.log("hello");
-            } */
             
        </script>
 
