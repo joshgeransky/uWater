@@ -149,22 +149,23 @@
              
              <div id="ghgh">
              
-            <div id="country">
-               <input class="form" id="country" type="text" onfocus="this.placeholder = ''" placeholder="Enter Country" onblur="this.placeholder = 'Enter Country'" minlength="0" maxlength="40" pattern="[A-Za-z]{0,40}">
+            <div id="">
+               <input class="form" id="country" type="text" value="" onfocus="this.placeholder = ''" placeholder="Enter Country" onblur="this.placeholder = 'Enter Country'" minlength="0" maxlength="40" pattern="[A-Za-z]{0,40}">
             </div>
-                 <p id="test1"></p>
-                 <p id="test2"></p>
-             
              </div>
              
             <br>
              
             <div id="subr">
-                <!-- fix these buttons -->
-               <button id="submitButton" class="buttons" type="submit" onclick="submitFunction()">Submit</button>
-               <button class="buttons" onclick="window.location.href='../uQuiz/uQuiz.html';">Random</button>
+                
+               
             </div>
+             
          </form> 
+              
+              <button id="submitButton" class="buttons" onclick="getValue()">Submit</button>
+               <button class="buttons" onclick="window.location.href='../uQuiz/uQuiz.html';">Random</button>
+              
          <br><br><br>
          <div style="text-align: center">
 
@@ -194,12 +195,6 @@
                     dbRef2.on ('value', function (snap) {
                         out2.innerText = snap.val();
                     });
-        // for submit
-        function submitFunction() {
-            var x = document.getElementById("country").value; // possibly .toLowerCase this
-            // now go to the url and use the input value for the database country type. Call all the children.
-            window.location.assign("thecountrypage.com");
-        }
     </script>
        
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
@@ -207,14 +202,24 @@
     <script src="../js/index.js"></script>
 
 
-        <script>
+        <script>/*
             var input = document.getElementById("submit");
             input.addEventListener("keyup", function(event) {
                 if (event.keyCode === 13) {
                     event.preventDefault();
                     document.getElementById("submit").click();
                 }  
-            }); 
+            }); */
+       </script>
+       
+       <script>
+        function getValue(){
+                var x = document.getElementById('country').value; // get the input value
+            localStorage.setItem("countryInput", x);
+            
+            // now go to the url and use the input value for the database country type. Call all the children.
+            window.location.assign("../uFacts/uFactsTEST.html");
+            }
        </script>
 
    </body>
