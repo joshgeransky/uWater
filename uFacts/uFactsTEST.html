@@ -75,7 +75,7 @@
 </header>
 
 <article class='article'>
-	<header class='article-header-uFacts'>
+	<header id='article-header-uFacts'>
 		<h1 id='article-title'></h1>
 		<span id='article-subtitle'></span>
 	</header>
@@ -87,8 +87,7 @@
         <div id="test"></div>
         
         <h1 id="status"></h1>
-        <p><b id="cleanest">Canada has some of the cleanest water on earth.</b><br>
-        Canada is a country known for its natural beauty, and being a first world country water is easily accessible by anyone. From the beautiful lakes to the corner grocery stores, water can be found anywhere by anyone with ease.</p>
+        <p><b id="cleanest"></b><br><div id="d"></div></p>
 	</section>
     
     <section class='country-content'>
@@ -110,9 +109,7 @@
             <div class='notable-water'>
             
                 <h2>Notable Attractions</h2>
-                <span id="attractions">
-                    
-                </span>
+                <span id="attractions"></span>
             
             </div>
         
@@ -161,6 +158,21 @@
                     var dbRef2 = firebase.database().ref().child("Countries").child(x).child("flag-img");
                     dbRef2.on ('value', function (snap) {
                         f.src = snap.val();
+                    });
+        var c = document.getElementById("cleanest");
+                    var dbRef2 = firebase.database().ref().child("Countries").child(x).child("country-subtext");
+                    dbRef2.on ('value', function (snap) {
+                        c.innerHTML = snap.val();
+                    });
+        var dyk = document.getElementById("d");
+                    var dbRef2 = firebase.database().ref().child("Countries").child(x).child("did-you-know");
+                    dbRef2.on ('value', function (snap) {
+                        dyk.innerHTML = snap.val();
+                    });
+        var header = document.getElementById("article-header-uFacts");
+                    var dbRef2 = firebase.database().ref().child("Countries").child(x).child("background-img");
+                    dbRef2.on ('value', function (snap) {
+                        header.style.backgroundImage = `url('${snap.val()}')`;
                     });
     
     </script>
