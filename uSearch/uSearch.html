@@ -69,6 +69,10 @@
         background-color: white;
               
          }
+          #buttonDiv{
+              position: relative;
+              left: 37%;
+          }
          .buttons {
          border-radius: 12px;
          padding: 8px 20px;
@@ -107,6 +111,19 @@
 		 font-size: 2em;
 		 }
       </style>
+       <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyBEfupg1Yxv54gWoZClRtOIgipjw-JoG5I",
+            authDomain: "uwater-a3a85.firebaseapp.com",
+            databaseURL: "https://uwater-a3a85.firebaseio.com",
+            projectId: "uwater-a3a85",
+            storageBucket: "uwater-a3a85.appspot.com",
+            messagingSenderId: "89656858094"
+          };
+          firebase.initializeApp(config);
+        </script>
    </head>
    <body>
 
@@ -136,76 +153,79 @@
              
              <div id="ghgh">
              
-            <div id="country">
-               <input class="form" id="country" type="text" onfocus="this.placeholder = ''" placeholder="Enter Country" onblur="this.placeholder = 'Enter Country'" minlength="0" maxlength="40" pattern="[A-Za-z]{0,40}">
+            <div id="">
+               <input class="form" id="country" type="text" value="" onfocus="this.placeholder = ''" placeholder="Enter Country" onblur="this.placeholder = 'Enter Country'" minlength="0" maxlength="40" pattern="[A-Za-z]{0,40}">
             </div>
-             
              </div>
              
             <br>
              
             <div id="subr">
-                <!-- fix these buttons -->
-               <button id="submitButton" class="buttons" type="submit" onclick="window.location.href = '../uQuiz/uQuiz.html';">Submit</button>
-               <button class="buttons" onclick="window.location.href='../uQuiz/uQuiz.html';">Random</button>
+                
+               
             </div>
+             
          </form> 
+              <div id="buttonDiv">
+              <button id="submitButton" class="buttons" onclick="getValue()">Submit</button>
+               <button class="buttons" onclick="window.location.href='../uQuiz/uQuiz.html';">Random</button>
+              
+              </div>
+              
+              
          <br><br><br>
          <div style="text-align: center">
-
-
-              </div></section>
-
             <button id="uquiz" onclick="window.location.href = '../uQuiz/uQuiz.html'">uQuiz</button>
+              </div></section>
+            <button id="uquiz" onclick="window.location.href = '../uQuiz/uQuiz.html';">uQuiz</button>
              <br><br><br> 
              
              <div><span id="visitors"> 
-		Total number of visitors:<div id="tally"></div>
+		Total number of visitors:<div id="tally">50(in a div)</div>
                 </span>	 </div>
 		   
 			  </div></section>
 
+
+              </div></section>
+          <button id="uquiz" onclick="window.location.href = '../uQuiz/uQuiz.html'">uQuiz</button>
+          
+             <br><br><br> 
+              <p id="visitors"> 
+            Total number of visitors:<div id="tally"></div>
+            </p>	 
+
+            
+             <br><br><br> 
+             
          <br><br><br>
-           </div>
 		   </article>
 		 
-		   
       <footer>
          <span>© 2019 Team 21</span>
       </footer>
-       <!-- firebase -->
-       <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBEfupg1Yxv54gWoZClRtOIgipjw-JoG5I",
-    authDomain: "uwater-a3a85.firebaseapp.com",
-    databaseURL: "https://uwater-a3a85.firebaseio.com",
-    projectId: "uwater-a3a85",
-    storageBucket: "uwater-a3a85.appspot.com",
-    messagingSenderId: "89656858094"
-  };
-  firebase.initializeApp(config);
-</script>
        
-       <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script> // firebase
+        // for tally
+        var out2 = document.getElementById("tally");
+                    var dbRef2 = firebase.database().ref().child("tally");
+                    dbRef2.on ('value', function (snap) {
+                        out2.innerText = snap.val();
+                    });
+    </script>
+       
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js'></script>
-
     <script src="../js/index.js"></script>
 
 
-        <script>
-            
-          /*  var input = document.getElementById("submit");
+        <script>/*
+            var input = document.getElementById("submit");
             input.addEventListener("keyup", function(event) {
                 if (event.keyCode === 13) {
                     event.preventDefault();
                     document.getElementById("submit").click();
-                }
-                
-                
-
-                 
+                }  
             }); */
             //firebase stuff
             var ref = firebase.database().ref();
@@ -225,7 +245,17 @@ ref.on("value", function(snapshot) {
                                     window.location = '../uFacts/uFacts.html';
                                    
             });
+
+       </script>
+       
+       <script>
+        function getValue(){
+                var x = document.getElementById('country').value; // get the input value
+            localStorage.setItem("countryInput", x);
             
+            // now go to the url and use the input value for the database country type. Call all the children.
+            window.location.assign("../uFacts/uFactsTEST.html");
+            }
        </script>
 
    </body>
