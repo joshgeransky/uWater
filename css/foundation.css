@@ -1,4 +1,4 @@
-.article-subtitle, .article-title {
+#article-subtitle, #article-title {
   font-weight: 300;
   letter-spacing: .15em;
 }
@@ -26,9 +26,8 @@ body, html, article {
   height: 100%;
 }
 
-.article-header-uFacts {
+#article-header-uFacts {
   background-color: #E31E25;
-  background-image: url(../images/canada_snow.jpg);
   background-size: cover;
     background-repeat: no-repeat;
   color: white;
@@ -47,9 +46,8 @@ body, html, article {
   padding-top: calc(2em + 40px);
 }
 
-.article-header {
+#article-header {
   background-color: #E31E25;
-  background-image: url(../images/canada_snow.jpg);
   background-size: cover;
     background-repeat: no-repeat;
   color: white;
@@ -89,7 +87,7 @@ body, html, article {
   display: block;
 }
 
-.article-title {
+#article-title {
   font-size: 1.8rem;
   margin-bottom: 10px;
   text-transform: uppercase;
