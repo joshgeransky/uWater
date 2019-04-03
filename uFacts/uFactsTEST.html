@@ -76,8 +76,8 @@
 
 <article class='article'>
 	<header class='article-header-uFacts'>
-		<h1 class='article-title'>Canada</h1>
-		<span class='article-subtitle'>North America</span>
+		<h1 id='article-title'></h1>
+		<span id='article-subtitle'></span>
 	</header>
 
 	<!-- [data-animate-header-target] - this is where the header will animate -->
@@ -94,7 +94,7 @@
     <section class='country-content'>
     
         <div class='country-photos'>
-        <img src='../images/canada_flag.jpg' alt='Canadian flag'>
+        <img id="flag" src="" alt='flag'>
         
         </div>
         
@@ -103,17 +103,15 @@
             <div class='find-water'>
                 
                 <h2>Where To Find Water</h2>
-                <span>
-                    You can find water literally anywhere! Canada is great.
-                </span>
+                <span id="where"></span>
             
             </div>
             <br>
             <div class='notable-water'>
             
                 <h2>Notable Attractions</h2>
-                <span>
-                    Canada is known for its natural beauty and maple syrup! From the gorgeous forests and lakes of British Columbia to the stunning Maritimes, there's something here for everyone.
+                <span id="attractions">
+                    
                 </span>
             
             </div>
@@ -138,6 +136,31 @@
                     var dbRef2 = firebase.database().ref().child("Countries").child(x).child("water-status");
                     dbRef2.on ('value', function (snap) {
                         s.innerText = snap.val();
+                    });
+        var w = document.getElementById("where");
+                    var dbRef2 = firebase.database().ref().child("Countries").child(x).child("where-water");
+                    dbRef2.on ('value', function (snap) {
+                        w.innerText = snap.val();
+                    });
+        var a = document.getElementById("attractions");
+                    var dbRef2 = firebase.database().ref().child("Countries").child(x).child("attractions");
+                    dbRef2.on ('value', function (snap) {
+                        a.innerText = snap.val();
+                    });
+        var sub = document.getElementById("article-subtitle");
+                    var dbRef2 = firebase.database().ref().child("Countries").child(x).child("continent");
+                    dbRef2.on ('value', function (snap) {
+                        sub.innerText = snap.val();
+                    });
+        var aTitle = document.getElementById("article-title");
+                    var dbRef2 = firebase.database().ref().child("Countries").child(x).child("country-title");
+                    dbRef2.on ('value', function (snap) {
+                        aTitle.innerText = snap.val();
+                    });
+        var f = document.getElementById("flag");
+                    var dbRef2 = firebase.database().ref().child("Countries").child(x).child("flag-img");
+                    dbRef2.on ('value', function (snap) {
+                        f.src = snap.val();
                     });
     
     </script>
