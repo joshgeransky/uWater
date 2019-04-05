@@ -154,7 +154,7 @@
              <div id="ghgh">
              
             <div id="">
-               <input class="form" id="country" type="text" value="" onfocus="this.placeholder = ''" placeholder="Enter Country" onblur="this.placeholder = 'Enter Country'" minlength="0" maxlength="40" pattern="[A-Za-z]{0,40}">
+               <input class="form" id="country" type="text" value="" onKeyPress="getReturn()" onfocus="this.placeholder = ''" placeholder="Enter Country" onblur="this.placeholder = 'Enter Country'" minlength="0" maxlength="40" pattern="[A-Za-z]{0,40}">
             </div>
              </div>
              
@@ -209,14 +209,30 @@
     <script src="../js/index.js"></script>
 
 
-        <script>/*
-            var input = document.getElementById("submit");
-            input.addEventListener("keyup", function(event) {
+        <script>
+		
+		function getReturn() {
+           var y = document.getElementById("country")
+            .addEventListener("keyup", function(event) {
+			console.log("inside getReturn()");
+			event.preventDefault();
                 if (event.keyCode === 13) {
-                    event.preventDefault();
-                    document.getElementById("submit").click();
+				   var x = document.getElementById('country').value; // get the input value
+            localStorage.setItem("countryInput", x);
+            
+            // now go to the url and use the input value for the database country type. Call all the children.
+            window.location.assign("../uFacts/uFactsTEST.html");
                 }  
-            }); */
+            });
+		}
+		/**
+			$("#submitButton").keyup(function(event) {
+				alert("hi");
+				if (event.keyCode === 13) {
+					$("#uquiz").click();
+				}
+			});		
+			*/
        </script>
        
        <script>
