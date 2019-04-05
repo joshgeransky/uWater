@@ -198,7 +198,7 @@
     <script> // firebase
         // for tally
         var out2 = document.getElementById("tally");
-                    var dbRef2 = firebase.database().ref().child("tally");
+                    var dbRef2 = firebase.database().ref().child("tallyPath").child("tally");
                     dbRef2.on ('value', function (snap) {
                         out2.innerText = snap.val();
                     });
