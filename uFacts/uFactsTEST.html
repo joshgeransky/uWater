@@ -181,8 +181,11 @@
     </script>
     <script>
         function yesFunction() {
-            var dbRef3 = firebase.database().ref().child("tallyPath").child("tally");
-            console.log(dbRef3);
+                    var dbRef3 = firebase.database().ref().child("tallyPath").child("tally");
+                    dbRef3.on ('value', function (snap) {
+                                var userNum = (snap.val);
+                                console.log(userNum);
+                            });
         }
     </script>
 
