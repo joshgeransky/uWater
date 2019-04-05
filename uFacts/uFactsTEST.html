@@ -114,9 +114,13 @@
             </div>
         
         </div>
-        
-        
     </section>
+    
+    <div>
+        <span>Did this information help you?</span>
+        <button onclick="yesFunction()">Yes</button>
+        <button onclick="window.location.href='../uSearch/uSearch.html';">No</button>
+    </div>
     
     <br>
     <footer>© 2019 Team 21</footer>
@@ -174,7 +178,12 @@
                     dbRef2.on ('value', function (snap) {
                         header.style.backgroundImage = `url('${snap.val()}')`;
                     });
-    
+    </script>
+    <script>
+        function yesFunction() {
+            var dbRef3 = firebase.database().ref().child("tally");
+            console.log(dbRef3);
+        }
     </script>
 
 </body>
