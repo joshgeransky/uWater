@@ -138,6 +138,12 @@
                     dbRef2.on ('value', function (snap) {
                         s.innerText = snap.val();
                     });
+                    var dbRef3 = firebase.database().ref().child("Countries").child(x).child("status-color");
+                    dbRef3.on ('value', function (snap) {
+                        s.style.color = snap.val();
+                    });
+                              
+                              
         var w = document.getElementById("where");
                     var dbRef2 = firebase.database().ref().child("Countries").child(x).child("where-water");
                     dbRef2.on ('value', function (snap) {
@@ -178,10 +184,12 @@
                     dbRef2.on ('value', function (snap) {
                         header.style.backgroundImage = `url('${snap.val()}')`;
                     });
+
+        
     </script>
     <script>
         function yesFunction() {
-            var dbRef3 = firebase.database().ref().child("tally");
+            var dbRef3 = firebase.database().ref().child("tallyPath").child("tally");
             console.log(dbRef3);
         }
     </script>
