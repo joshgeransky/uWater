@@ -67,7 +67,7 @@
 
 	<!-- [data-animate-header] - this is the actual element that will be fixed/animated -->
 	<menu class='header-bar' data-animate-header>
-        <a href='../uSearch/uSearch.html' class='btn-search' data-toggle-class='search-active'>uSearch</a>
+        <a href='../uSearch/index.html' class='btn-search' data-toggle-class='search-active'>uSearch</a>
 		<a href='#uWater' class='btn-menu' data-toggle-class='menu-active'>uWater</a>
         <a href='../uQuiz/uQuiz.html' class='btn-search' data-toggle-class='search-active'>uQuiz</a>
 
@@ -119,7 +119,7 @@
     <div>
         <span>Did this information help you?</span>
         <button onclick="yesFunction()">Yes</button>
-        <button onclick="window.location.href='../uSearch/uSearch.html';">No</button>
+        <button onclick="window.location.href='./index.html';">No</button>
     </div>
     
     <br>
@@ -138,6 +138,11 @@
                     dbRef2.on ('value', function (snap) {
                         s.innerText = snap.val();
                     });
+                    var dbRef3 = firebase.database().ref().child("Countries").child(x).child("status-color");
+                    dbRef3.on ('value', function (snap) {
+                        s.style.color = snap.val();
+                    });
+                                 
         var w = document.getElementById("where");
                     var dbRef2 = firebase.database().ref().child("Countries").child(x).child("where-water");
                     dbRef2.on ('value', function (snap) {
