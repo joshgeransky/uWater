@@ -228,8 +228,8 @@
   <button onclick="myFunction()" class="dropbtn" type="button">Dropdown</button>
   <div id="myDropdown" class="dropdown-content">
     <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-    <a href="#Canada">Canada</a>
-    <a href="#Egypt">Egypt</a>
+    <a href="javascript:void(0);" onclick="selectCountry('Canada')">Canada</a>
+    <a href="javascript:void(0);" onclick="selectCountry('Egypt')">Egypt</a>
   </div>
 </div>
              
@@ -313,13 +313,18 @@ function filterFunction() {
            
            
            
-        function getValue(){
-                var x = document.getElementById('country').value; // get the input value
-            localStorage.setItem("countryInput", x);
-            
+        function getValue(s){
+               // var x = document.getElementById('country').value; // get the input value
+            localStorage.setItem("countryInput", s);
             // now go to the url and use the input value for the database country type. Call all the children.
             window.location.assign("uFacts/uFactsTEST.html");
             }
+           
+           function selectCountry(s) {
+               getValue(s)
+           }
+           
+           
        </script>
 
    </body>
