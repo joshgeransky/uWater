@@ -66,7 +66,7 @@
 	<!-- [data-animate-header] - this is the actual element that will be fixed/animated -->
 	<menu class='header-bar' data-animate-header>
         <a href='../index.html' class='btn-search' data-toggle-class='search-active'>uSearch</a>
-		<a href='#uWater' class='btn-menu' data-toggle-class='menu-active'>uWater</a>
+		<a href='../index.html' class='btn-menu' data-toggle-class='menu-active'>uWater</a>
         <a href='../uQuiz/uQuiz.html' class='btn-search' data-toggle-class='search-active'>uQuiz</a>
 
 	</menu>
@@ -129,7 +129,7 @@
     <script src="../js/index.js"></script>
     
     <script>
-        var x = localStorage.getItem("countryInput"); // works
+        var x = localStorage.getItem("countryInput");
         
         var s = document.getElementById("status");
                     var dbRef2 = firebase.database().ref().child("Countries").child(x).child("water-status");
