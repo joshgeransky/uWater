@@ -75,9 +75,6 @@
         background-color: white;
               
          }
-          #buttonDiv{
-              text-align: center;
-          }
          .buttons {
          border-radius: 12px;
          padding: 8px 20px;
@@ -200,7 +197,6 @@
 
        <header class='header' data-animate-header-container>
 
-	<!-- [data-animate-header] - this is the actual element that will be fixed/animated -->
 	<menu class='header-bar' data-animate-header>
         <a href='index.html' class='btn-search' data-toggle-class='search-active'>uSearch</a>
 		<a href='#uWater' class='btn-menu' data-toggle-class='menu-active'>uWater</a>
@@ -210,9 +206,7 @@
 </header>
        
        
-       <article class='article'>
       <div class="content">
-          <section class="article-section">
          <div class="title">
          <!---   <h1 id="uSearchTitle">uSearch</h1> -->
              <img id='logo' alt='uWater' src='images/whiteLogo.png'>
@@ -223,7 +217,7 @@
          <form>
              
              
-            <div class="dropdown">
+            <div class="dropdown" style="text-align: center">
   <button onclick="myFunction()" class="dropbtn" type="button">Dropdown</button>
   <div id="myDropdown" class="dropdown-content">
     <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
@@ -236,11 +230,7 @@
              
          </form> 
               
-         <br>
-         <div style="text-align: center">
-
-
-              </div></section>
+         <br><br>
           <button id="uquiz" onclick="window.location.href = 'uQuiz/uQuiz.html'">uQuiz</button>
           
               
@@ -248,8 +238,7 @@
             Number of people helped:<div id="tally"></div>
           </p>
         
-		   </article>
-		 
+		 <br><br><br><br><br><br><br>
       <footer>
          <span>© 2019 Team 21</span>
       </footer>
