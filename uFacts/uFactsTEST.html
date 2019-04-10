@@ -187,8 +187,13 @@
     <script>
         function yesFunction() {
                     var dbRef3 = firebase.database().ref().child("tallyPath").child("tally");
-                    dbRef3++;
-            console.log(dbRef3);
+                    dbRef3.transaction(function(tally) {
+                        if (tally){
+                            tally = tally + 1;
+                        }
+                        return tally;
+                    });
+            
         }
     </script>
 
