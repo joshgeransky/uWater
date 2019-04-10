@@ -114,10 +114,10 @@
         </div>
     </section>
     
-    <div>
-        <span>Did this information help you?</span>
-        <button onclick="yesFunction()">Yes</button>
-        <button onclick="window.location.href='../index.html';">No</button>
+    <div id="help">
+        <span id="didHelp">Did this information help you?</span>
+        <button id="button1" onclick="yesFunction()">Yes</button>
+        <button id="button2" onclick="yesFunction()">No</button>
     </div>
     
     <br>
@@ -191,7 +191,12 @@
                         }
                         return tally;
                     });
-            
+            var button1 = document.getElementById("button1");
+            var button2 = document.getElementById("button2");
+            button1.parentNode.removeChild(button1);
+            button2.parentNode.removeChild(button2);
+            var thanks = document.getElementById("didHelp");
+            thanks.innerHTML = "Thank you for your input!";
         }
     </script>
 
