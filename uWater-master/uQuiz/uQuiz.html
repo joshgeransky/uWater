@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>uQuiz</title>
+    <meta charset="utf-8"/>
+  </head>
+    <link rel="stylesheet" type="text/css" href="../css/foundation.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
+  <style>
+	body { 
+	
+	background-color: #ebeef4;
+	
+	width: 100%
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+	
+	}
+	#lead{
+	 font-family: "Oswald", sans-serif;
+	 background-color: #33518e;
+	  border-radius: 50px;
+
+  padding: 20px; 
+
+  }
+	
+	#background{
+	width: 100%
+	background-repeat: no-repeat;
+	background-size: cover;
+	}
+   
+    #header {
+	font-weight: bold;
+		color: white;
+		background-color: gray;
+		font-size: 2.5em;
+	}
+      #uQuiz-title {
+	  margin-left: 175px;	
+          font-size: 48pt;
+		  padding-bottom: 50px;
+		  
+      }
+      
+	a {
+		
+		text-decoration: none;
+		color: black;
+		}
+
+	p{
+	font-weight: bold;
+	font-size: 2em;
+	text-align: center;
+	}
+	#prompt {
+		text-align: center;
+	}
+	footer {
+	text-align: center;
+	bottom: 0;
+	font-size: 0.8em;
+	}
+	section {
+		text-align: center;
+		
+	}
+	.button {
+
+	
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  float: right;
+	}
+	img {
+	display: inline;
+	
+	}
+	#anchor {
+	float: right;
+	}
+	
+	
+	#logo > a > img {
+		position:absolute;left:0px; top:0px;
+		
+	}
+	section {
+	position: auto;
+	display: block;
+	}
+#fo{
+font-size: 2em;
+padding: 20px;
+
+}
+
+.globe {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+}
+
+.globe:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: -20px -20px 50px 2px #000 inset;
+  border-radius: 50%;
+}
+
+.globe > div {
+  width: 200%;
+  height: 100%;
+  animation: spin 10s linear infinite;
+  background: url(https://web.opendrive.com/api/v1/download/file.json/NTlfMTQ1MTkzNDhf?inline=1);
+  /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
+}
+@keyframes spin {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+#leader {
+	 font-family: "Oswald", sans-serif;
+	 
+}
+
+h1 {
+font-size: 3em;
+word-spacing: 2px;
+}
+
+#submit{
+
+       
+         border-radius: 12px;
+         padding: 8px 20px;
+        background-color: white;
+             transition: 0.3s;
+         
+		 }
+		 
+          #submit:hover{
+              background-color: #4286f4;
+              cursor: pointer;
+          }
+form {
+font-size: 3em;
+
+}
+
+  </style>
+
+
+
+<body id = "b">
+<div id="background">
+ <header>
+            <div class="div-header">
+                
+                <div id="logo">
+                  
+                  
+                </div>
+                            
+            <nav id="menu">
+                <ul>
+                    <li><a href="../uSearch/uSearch.html">uSearch</a></li>
+                    <li><a href="../uQuiz/uQuiz.html">uQuiz</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        
+        </header><div class="globe">
+<div></div>
+</div>
+
+    <header class='header' data-animate-header-container>
+
+
+	<!-- [data-animate-header] - this is the actual element that will be fixed/animated -->
+	<menu class='header-bar' data-animate-header>
+        <a href='../index.html' class='btn-search' data-toggle-class='search-active'>uSearch</a>
+		<a href='#uWater' class='btn-menu' data-toggle-class='menu-active'>uWater</a>
+        <a href='../uQuiz/uQuiz.html' class='btn-search' data-toggle-class='search-active'>uQuiz</a>
+
+	</menu>
+</header>
+
+<div id="leader">
+<br><br><br>
+ <a class="button" href="../uBoard/uBoard.html">
+<button id="lead" type="button" class ="button">Leaderboard</button>
+</a>
+        <h1 id='uQuiz-title'>uQuiz</h1>
+		
+
+ </div>
+ 
+  <div class="globe">
+<div></div>
+</div>
+
+<!--
+<section>
+    <img src="../images/globe.png" id="globe" alt="The earth is actually flat! Don't believe the media!">
+
+</section>
+-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+ var rand = Math.floor(Math.random() * 5 + 1);
+ $(document).ready(function() {
+ 
+ function generateRandom() {
+console.log("random is: " + rand);
+ 
+ }
+ generateRandom();
+ 
+ function generateBackground(){
+ if(rand == 1) {
+	$('#background').css("background-image", "url(../images/Argentina.jpg)");
+	$('#background').css("background-repeat", "no-repeat");
+	$('#background').css("object-fit", "cover");
+	}
+if(rand == 2){
+	$('#background').css("background-image", "url(../images/Belgium.jpg)");
+	$('#background').css("background-repeat", "no-repeat");
+	$('#background').css("object-fit", "cover");
+	}
+if(rand == 3){
+	$('#background').css("background-image", "url(../images/Vancouver_Canada.jpg)");
+	$('#background').css("background-repeat", "no-repeat");
+	$('#background').css("object-fit", "cover");
+	}
+if(rand == 4){
+$('#background').css("background-image", "url(../images/Denmark.jpg)");
+$('#background').css("background-repeat", "no-repeat");
+$('#background').css("object-fit", "cover");
+}
+if(rand == 5){
+$('#background').css("background-image", "url(../images/Egypt.jpg)");
+$('#background').css("background-repeat", "no-repeat");
+$('#background').css("object-fit", "cover");
+}
+  
+ }
+ generateBackground();
+ 
+	
+
+
+
+	
+	/**
+		if(rand == 1) {
+			if(confirm("Argentina is the correct country")){
+			console.log("ID1 is the correct answer");
+			}
+		}
+		else if(rand == 2) {
+			if(confirm("Belgium is the correct country")){
+			console.log("ID2 is the correct answer");
+			}
+		}
+		*/	
+});
+
+//argentina: yes
+//belgium: yes
+//canada: yes
+//denmark: yes
+//egypt: no
+	
+function checkAnswer() {
+		var x = document.getElementById("f").elements[0].value;
+		var radio = document.getElementById("fo");
+	
+		var no = document.getElementById("fo").checked;
+		
+		var radioButtons = document.getElementsByName("cleanwater");
+for (var i = 0; i < radioButtons.length; i++) {
+    if (radioButtons[i].checked) {
+	if(rand == 1 || rand == 2 || rand == 3 || rand == 4) {  //all clean water
+			if(x == rand) {
+				alert("Correct country and it has clean water!!!");
+			}
+			else {
+			alert("Sorry, your answer is wrong.");
+			
+			}
+			document.location.reload(true);
+        //console.log("radioButton " + i + ": " + radioButtons[i].value);
+    }
+}
+		/**
+		alert(yes);
+		if(rand == 1 || rand == 2 || rand == 3 || rand == 4) {  //all clean water
+			if(x == rand && yes == true) {
+				alert("Correct country and it has clean water!!!");
+			}
+			else {
+			alert("Sorry, your answer is wrong.");
+			
+			}
+			document.location.reload(true);
+		} else { //unclean water
+			if(x == rand && yes == false) {
+				alert("Correct, you guessed the correct country and it has unsafe water.");
+			}
+			else {
+			alert("Sorry, your answer is wrong.");
+			
+			}
+			*/
+			//document.location.reload(true);
+		}
+}
+ 
+ function yesCheck() {
+ document.getElementById("fo").checked = true;
+ }
+ 
+ function noCheck() {
+ document.getElementById("fo").checked = true;
+ }
+
+</script>
+  
+    
+    
+    <section class='article-section' data-animate-header-target>
+<div id ="prompt">
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h1> What is this country?</h1>
+<br><br>
+<form id="f">
+	<select name="country">
+		<option id="1" value="1" name="Argentina">Argentina</option>
+		<option id="2" value="2" name="Belgium">Belguim</option>
+		<option id="3" value="3" name="Canada">Canada</option>
+		<option id="4" value="4" name="Denmark">Denmark</option>
+		<option id="5" value="5" name="Egypt">Egypt</option>
+		
+	</select>
+	<br><br>
+</form>
+<div id="dv">
+</div>
+<br>
+<h1>Is the water clean?</h1>
+<br>
+ <form id="fo">
+ <input type="radio" name="cleanwater" value="yes" checked> Yes<br>
+ <input type="radio" name="cleanwater" value="no"> No<br>
+ </form>
+ <br><br>
+ <button id="submit" onclick="checkAnswer()">Submit</button>
+	<br>
+ </div>
+ </section>
+</div>
+ <footer>
+ © 2019 Team 21
+ </footer>
+</body>
+ 
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js'></script>
+    <script src="../js/index.js"></script>
+
+</html>
