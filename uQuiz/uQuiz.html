@@ -174,7 +174,7 @@ font-size: 3em;
 
 }
 
-  </style>
+</style>
 
 
 
@@ -183,8 +183,7 @@ font-size: 3em;
  <header>
             <div class="div-header">
                 
-                <div id="logo">
-                  
+                <div id="logo">   
                   
                 </div>
                             
@@ -204,11 +203,10 @@ font-size: 3em;
     <header class='header' data-animate-header-container>
 
 
-	<!-- [data-animate-header] - this is the actual element that will be fixed/animated -->
 	<menu class='header-bar' data-animate-header>
         <a href='../index.html' class='btn-search' data-toggle-class='search-active'>uSearch</a>
-		<a href='#uWater' class='btn-menu' data-toggle-class='menu-active'>uWater</a>
-        <a href='../uQuiz/uQuiz.html' class='btn-search' data-toggle-class='search-active'>uQuiz</a>
+		<a href='../index.html' class='btn-menu' data-toggle-class='menu-active'>uWater</a>
+        <a href='uQuiz/uQuiz.html' class='btn-search' data-toggle-class='search-active'>uQuiz</a>
 
 	</menu>
 </header>
@@ -223,18 +221,45 @@ font-size: 3em;
 
  </div>
  
-  <div class="globe">
-<div></div>
+<div class="globe"></div>
+  <section class='article-section' data-animate-header-target>
+<div id ="prompt">
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h1> What is this country?</h1>
+<br><br>
+<form id="f">
+	<select name="country">
+		<option id="1" value="1" name="Argentina">Argentina</option>
+		<option id="2" value="2" name="Belgium">Belguim</option>
+		<option id="3" value="3" name="Canada">Canada</option>
+		<option id="4" value="4" name="Denmark">Denmark</option>
+		<option id="5" value="5" name="Egypt">Egypt</option>
+		
+	</select>
+	<br><br>
+</form>
+<div id="dv">
 </div>
+<br>
+<h1>Is the water clean?</h1>
+<br>
+ <form id="fo">
+ <input type="radio" name="cleanwater" value="yes" checked> Yes<br>
+ <input type="radio" name="cleanwater" value="no"> No<br>
+ </form>
+ <br><br>
+ <button id="submit" onclick="checkAnswer()">Submit</button>
+	<br>
+ </div>
+ </section>
+</div>
+ <footer>
+ © 2019 Team 21
+ </footer>
+ </footer>
 
-<!--
-<section>
-    <img src="../images/globe.png" id="globe" alt="The earth is actually flat! Don't believe the media!">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-</section>
--->
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript">
  var rand = Math.floor(Math.random() * 5 + 1);
  $(document).ready(function() {
@@ -276,30 +301,6 @@ $('#background').css("object-fit", "cover");
  generateBackground();
  
 	
-
-
-
-	
-	/**
-		if(rand == 1) {
-			if(confirm("Argentina is the correct country")){
-			console.log("ID1 is the correct answer");
-			}
-		}
-		else if(rand == 2) {
-			if(confirm("Belgium is the correct country")){
-			console.log("ID2 is the correct answer");
-			}
-		}
-		*/	
-});
-
-//argentina: yes
-//belgium: yes
-//canada: yes
-//denmark: yes
-//egypt: no
-	
 function checkAnswer() {
 		var x = document.getElementById("f").elements[0].value;
 		var radio = document.getElementById("fo");
@@ -318,31 +319,9 @@ for (var i = 0; i < radioButtons.length; i++) {
 			
 			}
 			document.location.reload(true);
-        //console.log("radioButton " + i + ": " + radioButtons[i].value);
+        }
     }
-}
-		/**
-		alert(yes);
-		if(rand == 1 || rand == 2 || rand == 3 || rand == 4) {  //all clean water
-			if(x == rand && yes == true) {
-				alert("Correct country and it has clean water!!!");
-			}
-			else {
-			alert("Sorry, your answer is wrong.");
-			
-			}
-			document.location.reload(true);
-		} else { //unclean water
-			if(x == rand && yes == false) {
-				alert("Correct, you guessed the correct country and it has unsafe water.");
-			}
-			else {
-			alert("Sorry, your answer is wrong.");
-			
-			}
-			*/
-			//document.location.reload(true);
-		}
+    }
 }
  
  function yesCheck() {
@@ -352,48 +331,12 @@ for (var i = 0; i < radioButtons.length; i++) {
  function noCheck() {
  document.getElementById("fo").checked = true;
  }
+ });
+ </script>
 
-</script>
-  
-    
-    
-    <section class='article-section' data-animate-header-target>
-<div id ="prompt">
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<h1> What is this country?</h1>
-<br><br>
-<form id="f">
-	<select name="country">
-		<option id="1" value="1" name="Argentina">Argentina</option>
-		<option id="2" value="2" name="Belgium">Belguim</option>
-		<option id="3" value="3" name="Canada">Canada</option>
-		<option id="4" value="4" name="Denmark">Denmark</option>
-		<option id="5" value="5" name="Egypt">Egypt</option>
-		
-	</select>
-	<br><br>
-</form>
-<div id="dv">
-</div>
-<br>
-<h1>Is the water clean?</h1>
-<br>
- <form id="fo">
- <input type="radio" name="cleanwater" value="yes" checked> Yes<br>
- <input type="radio" name="cleanwater" value="no"> No<br>
- </form>
- <br><br>
- <button id="submit" onclick="checkAnswer()">Submit</button>
-	<br>
- </div>
- </section>
-</div>
- <footer>
- © 2019 Team 21
- </footer>
 </body>
  
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js'></script>
     <script src="../js/index.js"></script>
 
