@@ -75,10 +75,6 @@
         background-color: white;
               
          }
-          #buttonDiv{
-              position: relative;
-              left: 37%;
-          }
          .buttons {
          border-radius: 12px;
          padding: 8px 20px;
@@ -201,19 +197,16 @@
 
        <header class='header' data-animate-header-container>
 
-	<!-- [data-animate-header] - this is the actual element that will be fixed/animated -->
 	<menu class='header-bar' data-animate-header>
-        <a href='../index.html' class='btn-search' data-toggle-class='search-active'>uSearch</a>
+        <a href='index.html' class='btn-search' data-toggle-class='search-active'>uSearch</a>
 		<a href='#uWater' class='btn-menu' data-toggle-class='menu-active'>uWater</a>
-        <a href='../uQuiz/uQuiz.html' class='btn-search' data-toggle-class='search-active'>uQuiz</a>
+        <a href='uQuiz/uQuiz.html' class='btn-search' data-toggle-class='search-active'>uQuiz</a>
 
 	</menu>
 </header>
        
        
-       <article class='article'>
       <div class="content">
-          <section class="article-section">
          <div class="title">
          <!---   <h1 id="uSearchTitle">uSearch</h1> -->
              <img id='logo' alt='uWater' src='images/whiteLogo.png'>
@@ -224,30 +217,20 @@
          <form>
              
              
-            <div class="dropdown">
+            <div class="dropdown" style="text-align: center">
   <button onclick="myFunction()" class="dropbtn" type="button">Dropdown</button>
   <div id="myDropdown" class="dropdown-content">
     <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-    <a href="#Canada">Canada</a>
-    <a href="#Egypt">Egypt</a>
+    <a href="javascript:void(0);" onclick="selectCountry('Canada')">Canada</a>
+    <a href="javascript:void(0);" onclick="selectCountry('Egypt')">Egypt</a>
   </div>
 </div>
              
             <br>
              
          </form> 
-              <div id="buttonDiv">
-              <button id="submitButton" class="buttons" onclick="getValue()">Submit</button>
-               <button class="buttons" onclick="window.location.href='uQuiz/uQuiz.html';">Random</button>
               
-              </div>
-              
-              
-         <br>
-         <div style="text-align: center">
-
-
-              </div></section>
+         <br><br>
           <button id="uquiz" onclick="window.location.href = 'uQuiz/uQuiz.html'">uQuiz</button>
           
               
@@ -255,8 +238,7 @@
             Number of people helped:<div id="tally"></div>
           </p>
         
-		   </article>
-		 
+		 <br><br><br><br><br><br><br>
       <footer>
          <span>© 2019 Team 21</span>
       </footer>
@@ -313,13 +295,18 @@ function filterFunction() {
            
            
            
-        function getValue(){
-                var x = document.getElementById('country').value; // get the input value
-            localStorage.setItem("countryInput", x);
-            
+        function getValue(s){
+               // var x = document.getElementById('country').value; // get the input value
+            localStorage.setItem("countryInput", s);
             // now go to the url and use the input value for the database country type. Call all the children.
             window.location.assign("uFacts/uFactsTEST.html");
             }
+           
+           function selectCountry(s) {
+               getValue(s)
+           }
+           
+           
        </script>
 
    </body>
